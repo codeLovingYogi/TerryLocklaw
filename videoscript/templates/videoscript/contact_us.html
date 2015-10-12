@@ -1,0 +1,15 @@
+{% extends 'videoscript/base.html' %}
+
+{% block content %}
+  <h2>Contact Us</h2>
+  <div id="contact">
+    <form class="contact-form" method="post">
+     	{% csrf_token %}
+      <table>
+        {{ form.as_table }}
+      </table>
+      
+    	<input type="submit" value="Submit" />
+    </form>
+  </div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'videoscript/base.html' %}
+
+{% block content %}
+
+<div id="main">
+	<div id="content">
+		<div id="video">
+
+
+    <!-- {% for episode in episodes %}
+    	<div> -->
+    		<h2><a href="">{{ episode.title }}</a></h2>
+    		        <!-- <h2>Music from the Show</h2><br> -->
+  <!--           <iframe width="700" height="400" src="https://www.youtube.com/embed/wqgoFAVY7Yo?autoplay=1" frameborder="0" allowfullscreen></iframe> -->
+                    <iframe width="700" height="400" src="https://www.youtube.com/embed/wqgoFAVY7Yo" frameborder="0" allowfullscreen></iframe>
+                    <div id="script">
+    		<p>{{ episode.script|linebreaks }}</p>
+    	</div>
+<!-- 
+    	</div>
+    {% endfor %} -->
+    	</div>
+
+
+	</div>
+	
+
+</div>
+
+
+
+{% endblock %}

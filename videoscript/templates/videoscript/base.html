@@ -1,0 +1,42 @@
+{% load staticfiles %}
+
+<html>
+  <head>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+      <link rel="stylesheet" href="{% static 'css/videoscript.css' %}">
+  </head>
+
+  <body>
+    <div id="container"> 
+      <div id="header">
+        <h1><a href="{% url 'videoscript.views.script_main' %}">Johnnies Show</a></h1>
+      </div>
+
+      <!-- <div id="navigation">
+        <a href="#">Meet the Cast</a><br>
+        <a href="#">Follow the Show</a><br>
+        <a href="#">About Us</a><br> -->
+
+      <div id="socialmedia">
+        <a href="http://www.facebook.com"><img src="https://i.imgur.com/Xv6HHHC.png" title="Follow us on Facebook" width="35" height="35"/></a>
+        <a href="http://www.instagram.com"><img src="https://imgur.com/eNY8QdA.png" title="Follow us on Instagram" width="35" height="35"/></a>
+        <a href="http://www.twitter.com"><img src="https://i.imgur.com/3oEUh7X.png" title="Follow us on Twitter" width="35" height="35"/></a>
+        <a href="http://www.youtube.com"><img src="https://i.imgur.com/R3mOUtJ.png" title="Follow us on YouTube" width="35" height="35"/></a></br>
+      </div>
+
+      <div id="contactlink">
+        <a href="{% url 'videoscript.views.contact_us' %}">Contact us</a>
+      </div>
+
+      {% block content %}
+      {% endblock %}
+    
+      <div id="footer">
+            Copyright © Rath Records
+      </div>
+
+    </div>
+  </body>
+</html>
